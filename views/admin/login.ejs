@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login — ARVEXTA</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+<body class="admin-body">
+
+    <main class="admin-login">
+
+        <div class="admin-login-card">
+
+            <div class="admin-logo">
+                ARV<span>EXTA</span>
+            </div>
+
+            <p class="admin-label">
+                ADMIN PANEL
+            </p>
+
+            <h1>
+                Welcome Back
+            </h1>
+
+            <p class="admin-description">
+                Login untuk mengelola portfolio ARVEXTA.
+            </p>
+
+
+            <% if (error) { %>
+
+                <div class="admin-error">
+                    <%= error %>
+                </div>
+
+            <% } %>
+
+
+            <form
+                action="/admin/login"
+                method="POST"
+            >
+
+                <div class="admin-field">
+
+                    <label>
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Masukkan username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Masukkan password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-login-button"
+                >
+                    Login →
+                </button>
+
+            </form>
+
+
+            <a
+                href="/"
+                class="admin-back"
+            >
+                ← Kembali ke Website
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

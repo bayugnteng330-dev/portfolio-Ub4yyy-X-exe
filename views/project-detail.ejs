@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        <%= project.title %> — ARVEXTA
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         PAGE LOADER
+    ================================================== -->
+
+    <div id="page-loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                ARV<span>EXTA</span>
+            </div>
+
+            <div class="loader-line"></div>
+
+            <div class="loader-text">
+                Loading experience...
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            ARV<span>EXTA</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+            <a href="/projects">
+                Projects
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==================================================
+         PROJECT DETAIL
+    ================================================== -->
+
+    <main class="project-detail-page">
+
+        <div class="project-detail-header">
+
+            <span class="detail-label">
+                PROJECT / DETAIL
+            </span>
+
+            <h1>
+                <%= project.title %>
+            </h1>
+
+        </div>
+
+
+        <section class="project-detail">
+
+            <!-- PROJECT IMAGE -->
+
+            <div class="project-detail-image">
+
+                <% if (project.image) { %>
+
+                    <img
+                        src="<%= project.image %>"
+                        alt="<%= project.title %>"
+                    >
+
+                <% } else { %>
+
+                    <div class="project-placeholder">
+
+                        <span>
+                            ARVEXTA
+                        </span>
+
+                    </div>
+
+                <% } %>
+
+            </div>
+
+
+            <!-- PROJECT CONTENT -->
+
+            <div class="project-detail-content">
+
+                <div class="project-detail-number">
+
+                    PROJECT_<%= project.id %>
+
+                </div>
+
+
+                <h2>
+                    <%= project.title %>
+                </h2>
+
+
+                <p class="project-description">
+
+                    <%= project.description %>
+
+                </p>
+
+
+                <!-- TECHNOLOGY -->
+
+                <% if (project.tech) { %>
+
+                    <div class="project-detail-tech">
+
+                        <% project.tech
+                            .split(",")
+                            .forEach(item => { %>
+
+                            <span>
+                                <%= item.trim() %>
+                            </span>
+
+                        <% }); %>
+
+                    </div>
+
+                <% } %>
+
+
+                <!-- ACTION BUTTONS -->
+
+                <div class="project-detail-actions">
+
+                    <% if (project.github) { %>
+
+                        <a
+                            href="<%= project.github %>"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn primary"
+                        >
+                            GitHub →
+                        </a>
+
+                    <% } %>
+
+
+                    <% if (project.demo) { %>
+
+                        <a
+                            href="<%= project.demo %>"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn secondary"
+                        >
+                            Live Demo →
+                        </a>
+
+                    <% } %>
+
+                </div>
+
+
+                <!-- BACK -->
+
+                <a
+                    href="/projects"
+                    class="back-projects"
+                >
+                    ← Kembali ke Projects
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div>
+            © 2026 
+        </div>
+
+        <div>
+            Node.js + Express + EJS + MySQL
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="/js/script.js"></script>
+
+    <script src="/js/loading.js"></script>
+
+</body>
+
+</html>

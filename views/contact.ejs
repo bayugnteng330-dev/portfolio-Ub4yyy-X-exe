@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact — Arvexta</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         PAGE LOADER
+    ================================================== -->
+
+    <div id="page-loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                Ub4yyy<span> X exe</span>
+            </div>
+
+            <div class="loader-line"></div>
+
+            <div class="loader-text">
+                Loading experience...
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ARV<span>EXTA</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+            <a href="/projects">
+                Projects
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==================================================
+         CONTACT
+    ================================================== -->
+
+    <main class="contact-page">
+
+        <section class="page-header">
+
+            <span>
+                03 / CONTACT
+            </span>
+
+            <h1>
+                Let's <span>Talk.</span>
+            </h1>
+
+            <p class="page-description">
+                Punya ide, project, atau ingin berdiskusi?
+                Kirim pesan melalui form di bawah.
+            </p>
+
+        </section>
+
+
+        <section class="contact-section">
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-info">
+
+                <span class="contact-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    Let's build
+                    something <span>awesome.</span>
+                </h2>
+
+                <p>
+                    Saya terbuka untuk berdiskusi mengenai
+                    website, aplikasi, project, maupun
+                    kolaborasi teknologi.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:arvexta@gmail.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-wrapper">
+
+
+                <% if (success) { %>
+
+                    <div class="success">
+                        Pesan berhasil dikirim!
+                    </div>
+
+                <% } %>
+
+
+                <% if (error) { %>
+
+                    <div class="contact-error">
+                        <%= error %>
+                    </div>
+
+                <% } %>
+
+
+                <form
+                    action="/contact"
+                    method="POST"
+                    class="contact-form"
+                >
+
+                    <label for="name">
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Masukkan nama kamu"
+                        required
+                    >
+
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="nama@email.com"
+                        required
+                    >
+
+
+                    <label for="message">
+                        Pesan
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tulis pesan kamu..."
+                        required
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn primary contact-submit"
+                    >
+                        Send Message →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div>
+            © 2026 
+        </div>
+
+        <div>
+            Node.js + Express + EJS + MySQL
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="/js/script.js"></script>
+
+    <script src="/js/loading.js"></script>
+
+</body>
+
+</html>
